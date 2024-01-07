@@ -1,0 +1,50 @@
+
+/* Start Dark Mod */
+.dark-mode {
+    width: fit-content;
+    text-align: center;
+    position: relative;
+  }
+  .dark-mode .checkbox {
+    visibility: hidden;
+    appearance: none;
+    display: none;
+    text-align: center;
+  }
+  .dark-mode .fa-moon {
+    position: absolute;
+    left: 50%;
+    scale: var(--mian-scale);
+    top: 2px;
+    cursor: pointer;
+    padding-inline: 5px;
+    transition: none;
+  }
+  .dark-mode .fa-sun {
+    scale: var(--mian-scale);
+    color: transparent;
+    cursor: pointer;
+    padding-inline: 3px;
+    margin-left: 15px;
+    transition: none;
+  }
+  /* if input was checkd */
+  .dark-mode input[type='checkbox']:checked ~ .fa-moon {
+    visibility: hidden;
+    display: none;
+  }
+  .dark-mode input[type='checkbox']:checked ~ .fa-sun {
+    color: var(--dark-color-active--);
+  }
+  :has(input.checkbox:checked) {
+    --light-color-active: var(--dark-color-active--);
+    --light-bg-alt-section: var(--dark-bg-item--);
+    --light-bg-active: var(--dark-bg-active--);
+    --light-bg-section: var(--dark-bg-section--);
+    --light-title: var(--dark-title);
+    --light-bg-alt-section: var(--dark-bg-alt-section--);
+    --light-bg-item: var(--dark-bg-item--);
+    --light-bg-form-section: var(--dark-bg-form-section);
+    --dark-color-scoll: var(--light-color-scoll);
+    --light-color-icon:var(--dark-color-icon)
+  }
